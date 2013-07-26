@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Page Title</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+	  <link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	 <script>
+     	$(document).ready(function(){
+			$.ajax({
+				type: "GET",
+				url: "sites.xml",
+				dataType: "xml",
+				success: function(xml) {
+					$(xml).find('site').each(function(){
+						var id = $(this).attr('id');
+						var title = $(this).find('title').text();
+						var url = $(this).find('url').text();
+						$('<div class="items" id="link_'+id+'"></div>').html('<a href="'+url+'">'+title+'</a>').appendTo('#page-wrap');
+						$(this).find('desc').each(function(){
+							var brief = $(this).find('brief').text();
+							var long = $(this).find('long').text();
+							$('<div class="brief"></div>').html(brief).appendTo('#link_'+id);
+							$('<div class="long"></div>').html(long).appendTo('#link_'+id);
+							$(document).alert(brief;)
+						});
+					});
+				}
+			});
+		});
+     </script>
+	<script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+	<script type="text/javascript">
+	
+	function myFunction() {
+	    document.getElementById('food5').src = 
+	    	"img/Picture3.jpg";
+	}
+
+	</script>
+</head>
+<body>
+
+<div data-role="page">
+	<div data-role="header">
+	<h1>Euphoria</h1>
+	</div>
+	<div data-role=navbar>
+	<ul>
+		<li><a href="" data-role="button" data-icon="T1" data-iconpos="right">A</a></li>
+		<li><a href="" data-role="button" data-icon="T2" data-iconpos="right">B</a></li>
+		<li><a href="" data-role="button" data-icon="T3" data-iconpos="right">C</a></li>
+	</ul>
+	</div>
+
+	<div data-role="content">
+
+	<div class="ui-grid-b">
+ 			<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture1.jpg" id="food1" onclick="myFunction()"> </a>
+            </div>
+            <div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture2.jpg" id="food2" onclick="myFunction()">  </a>
+            </div>
+            <div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture3.jpg" id="food3"  onclick="myFunction()"></a>
+            </div>
+            <div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture4.jpg" id="food4" onclick="myFunction()"> </a>
+            </div>
+            <div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture5.jpg" id="food5" onclick="myFunction()">  </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture6.jpg" id="food6" onclick="myFunction()"> </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture7.jpg" id="food7" onclick="myFunction()">  </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture8.jpg" id="food8" onclick="myFunction()">  </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture9.jpg" id="food9" onclick="myFunction()">  </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture10.jpg" id="food10" onclick="myFunction()"> </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture11.jpg" id="food11" onclick="myFunction()">  </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture12.jpg" id="food12" onclick="myFunction()"> </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture5.jpg" id="food13" onclick="myFunction()">  </a>
+        	</div>
+        	<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture5.jpg" id="food14" onclick="myFunction()">  </a>
+ 			</div>
+ 			<div class="ui-block-b">
+            <a href="" data-theme="" id="ventaOption"> <img src="img/Picture5.jpg" id="food15" onclick="myFunction()">  </a>
+ 			</div>
+        </div>
+    </div><!-- /content -->
+		 <div data-role="footer" class="ui-bar">
+			<div class="ui-grid-b">
+			<div class="ui-block-b">						
+				<select name="select-choice-1" id="select-choice-1" data-theme="a">
+					<option value="Add More Items">Add More Items</option>
+					<option value="Apple">Apple</option>
+					<option value="Rice">Rice</option>
+					<option value="Olive">Olive</option>
+				</select>
+			</div>
+			<div class="ui-block-b">
+				 <a href="" data-role="button" data-icon="plus">Add</a>
+			 </div>
+			</div>
+		</div>
+		
+		
+        
+</div><!-- /page -->
+
+</body>
+</html>

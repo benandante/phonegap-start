@@ -23,20 +23,48 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+    	<script type="text/javascript" src="cordova.js"></script>
+    	<script type="text/javascript" src="phonegap.js"></script>
+    	<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+    	<script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
         <title>Hello World world world</title>
     </head>
-    <body>
+    <script>
+
+     function onLoad(){
+     	document.addEventListener("deviceready",
+		onDeviceReady, true);
+     }
+     
+    
+  </script>
+    
+    <body onload="onLoad();">
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>LET'S EAT</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+        <p>A native-looking web based mobile application.</p>
+    <ul data-role="listview" data-style="inset" data-type="group">
+        <li>I want to:
+            <ul>
+                <li data-icon="play"><a href="../../content/mobile/application/play-music.html">Play Music</a></li>
+                <li data-icon="cart"><a href="../../content/mobile/application/music-store.html">Buy Music</a></li>
+            </ul>
+        </li>
+    </ul>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
+        
+        
         <script type="text/javascript" src="js/index.js"></script>
+          <script type="text/javascript" src="js/databaseModule.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+      
+       
     </body>
 </html>

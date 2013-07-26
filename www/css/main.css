@@ -1,0 +1,26 @@
+.my-button {
+    background-image: url('img/Picture1.jpg') !important;
+}
+
+.ui-grid-b img {
+    width  : 100%;
+    height : 100%;
+}
+.ui-icon-abc
+{
+    background: url(/img/Toolbar1.png) no-repeat rgba(0, 0, 0, 0.4) !important;
+    background-size: 16px 16px;
+}
+/* custom icons do not work!!!!*/
+.ui-icon-phone-touch,
+.ui-icon-email {
+	background-image: url(/images/icons-18-white-custom.png);
+	background-repeat: no-repeat;
+}
+.ui-icon-phone-touch {
+	background-position: 0 50%;
+}
+.ui-icon-email {
+	background-position: -36px 50%;
+}
+
